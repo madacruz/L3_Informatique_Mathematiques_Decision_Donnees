@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT cv (coordonnees,lesFormations,lesExperiences?,activites?,langues?,connaissancesInfo?) >
+<!ELEMENT coordonnees (nom,prenom,adresse,dateDeNaissance,tel,email) >
+<!ELEMENT nom (#PCDATA) >
+<!ELEMENT prenom (#PCDATA) >
+<!ELEMENT dateDeNaissance (#PCDATA) >
+<!ELEMENT tel (#PCDATA) >
+<!ELEMENT email (#PCDATA) >
+<!ELEMENT adresse (numero,voie,codepostal,ville) >
+<!ELEMENT numero (#PCDATA) >
+<!ELEMENT voie (#PCDATA) >
+<!ELEMENT codepostal (#PCDATA) >
+<!ELEMENT ville (#PCDATA) >
+<!ELEMENT lesFormations (formation*) >
+<!ELEMENT formation (annee,diplome,lieu,mention?) >
+<!ELEMENT annee (#PCDATA) >
+<!ELEMENT diplome (#PCDATA) >
+<!ELEMENT lieu (#PCDATA) >
+<!ELEMENT mention (#PCDATA) >
+<!ELEMENT lesExperiences (experience*) >
+<!ELEMENT experience (annee, libelle, lieu, descriptif?) >
+<!ELEMENT libelle (#PCDATA) >
+<!ELEMENT descriptif (#PCDATA) >
+<!ELEMENT activites (#PCDATA) >
+<!ELEMENT langues (langue*) >
+<!ELEMENT langue EMPTY>
+<!ATTLIST langue nom CDATA #REQUIRED>
+<!ATTLIST langue parle (oui|non) #IMPLIED> 
+<!ATTLIST langue ecrit (oui|non) #IMPLIED> 

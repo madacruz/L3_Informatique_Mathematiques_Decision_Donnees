@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT salles (salle*)>
+<!ELEMENT salle (nom, infos, lieu, concert*)>
+<!ELEMENT nom (#PCDATA)>
+<!ELEMENT infos (adresse,tel,email?) >
+<!ELEMENT adresse (#PCDATA)>
+<!ELEMENT tel (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT lieu (#PCDATA) >
+<!ELEMENT concert (titre, date, description, tourDeChant)>
+<!ELEMENT titre (#PCDATA)>
+<!ELEMENT date (#PCDATA) >
+<!ELEMENT description (#PCDATA) >
+<!ELEMENT tourDeChant (chant+)>
+<!ELEMENT chant (artiste,chanson+) >
+<!ELEMENT artiste (nom, prenom, dateDeNaissance,photo?,url?,bio)>
+<!ATTLIST artiste id ID #REQUIRED> 
+<!ELEMENT prenom (#PCDATA) >
+<!ELEMENT dateDeNaissance (#PCDATA) >
+<!ELEMENT photo EMPTY>
+<!ATTLIST photo src CDATA #REQUIRED>
+<!ELEMENT url (#PCDATA)>
+<!ATTLIST url href CDATA #REQUIRED>
+<!ELEMENT bio (#PCDATA)>
+<!ELEMENT chanson (titre, auteur+, compositeur+,texte)>
+<!ELEMENT titre (#PCDATA)>
+<!ELEMENT auteur EMPTY >
+<!ATTLIST auteur ref IDREF #REQUIRED> 
+<!ELEMENT compositeur EMPTY >
+<!ATTLIST compositeur ref IDREF #REQUIRED> 
+<!ELEMENT texte (#PCDATA) >
+
+

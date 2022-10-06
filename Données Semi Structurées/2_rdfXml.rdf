@@ -1,0 +1,238 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE rdf:RDF [
+  <!ENTITY Cinematheque "http://example.org/schemas/Cinematheque.rdfs"> ]>
+
+<rdf:RDF
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns="&Cinematheque;#"
+  xml:base="&Cinematheque;-instances">
+  
+  
+	<Cinematheque rdf:ID="MaCinematheque">
+		<film rdf:resource="#Mademoiselle"/>
+		<artiste rdf:resource="#PChanWook"/>
+		<artiste rdf:resource="#KMinHee"/>
+		<artiste rdf:resource="#KTaeRi"/>
+		
+		<film rdf:resource="#UneVieCachee"/>
+		<artiste rdf:resource="#TMalick"/>
+		<artiste rdf:resource="#ADiehl"/>
+		
+		<film rdf:resource="#Alien"/>
+		<artiste rdf:resource="#RScott"/>
+		<artiste rdf:resource="#SWeaver"/>
+		
+		<film rdf:resource="#PulpFiction"/>
+		<artiste rdf:resource="#QTarantino"/>
+		<artiste rdf:resource="#BWillis"/>
+		<artiste rdf:resource="#JTravolta"/>
+		
+		<film rdf:resource="#ReservoirDogs"/>
+		<artiste rdf:resource="#QTarantino"/>
+		<artiste rdf:resource="#HKeitel"/>
+		
+		<film rdf:resource="#Psychose"/>
+		<artiste rdf:resource="#AHitchcock"/>
+		<artiste rdf:resource="#APerkins"/>
+		<artiste rdf:resource="#JLeigh"/>
+		
+		<film rdf:resource="#58MinutesPourVivre"/>
+		<artiste rdf:resource="#RHarlin"/>
+		<artiste rdf:resource="#BWillis"/>
+		<artiste rdf:resource="#BBedelia"/>
+	</Cinematheque>
+	
+	
+	<Film rdf:ID="Mademoiselle">
+		<nom>Mademoiselle</nom>
+		<genre>Drame</genre>
+		<genre>Romance</genre>
+		<genre>Thriller</genre>
+		<annee>2016</annee>
+		<dirigePar rdf:resource="#PChanWook"/>
+		<distribution rdf:resource="#LHideko"/>
+		<distribution rdf:resource="#Sookee"/>
+	</Film>
+	
+	<Artiste rdf:ID="PChanWook">
+		<nom>Park Chan Wook</nom>
+	</Artiste>
+	
+	<Distribution rdf:ID="LHideko">
+		<personnage>Lady Hideko</personnage>
+		<acteur rdf:resource="#KMinHee"/>
+	</Distribution>
+	
+	<Distribution rdf:ID="Sookee">
+		<personnage>Sookee</personnage>
+		<acteur rdf:resource="#KTaeRi"/>
+	</Distribution>
+	
+	<Artiste rdf:ID="KMinHee">
+		<nom>Kim Min Hee</nom>
+	</Artiste>
+		
+	<Artiste rdf:ID="KTaeRi">
+		<nom>Kim Tae Ri</nom>
+	</Artiste>
+	
+	<Film rdf:ID="UneVieCachee">
+		<nom>Une vie cachee</nom>
+		<genre>Drame</genre>
+		<genre>Biography</genre>
+		<genre>Guerre</genre>
+		<annee>2019</annee>
+		<dirigePar rdf:resource="#TMalick"/>
+		<distribution rdf:resource="#FJagerstatter"/>
+		<resume>Inspire de faits reels Franz Jagerstatter paysan autrichien refuse de se battre aux cotes des nazis Reconnu coupable de trahison par le regime hitlerien il est passible de la peine capitale Mais porte par sa foi inebranlable et son amour pour sa femme Fani et ses enfants Franz reste un homme libre Une vie cachee raconte lhistoire de ces heros meconnus</resume>
+	</Film>
+	
+	<Artiste rdf:ID="TMalick">
+		<nom>Terrence Malick</nom>
+	</Artiste>
+	
+	<Distribution rdf:ID="FJagerstatter">
+		<personnage>Franz Jagerstatter</personnage>
+		<acteur rdf:resource="#ADiehl"/>
+	</Distribution>
+		
+	<Artiste rdf:ID="ADiehl">
+		<nom>August Diehl</nom>
+	</Artiste>
+	
+	<Film rdf:ID="Alien">
+		<nom>Alien</nom>
+		<genre>Science Fiction</genre>
+		<genre>Horreur</genre>
+		<annee>1979</annee>
+		<dirigePar rdf:resource="#RScott"/>
+		<distribution rdf:resource="#ERipley"/>
+		<resume>Le vaisseau Nostromo et son equipage rentrent sur Terre avec une cargaison de minerai Mais lors dun arret force sur une planete deserte lofficier Kane se fait agresser par une forme de vie inconnue une arachnide qui etouffe son visage</resume>
+	</Film>
+	
+	<Artiste rdf:ID="RScott">
+			<nom>Ridley Scott</nom>
+	</Artiste>
+	
+	<Distribution rdf:ID="ERipley">
+		<personnage>Ellen Ripley</personnage>
+		<acteur rdf:resource="#SWeaver"/>
+	</Distribution>
+	
+	<Artiste rdf:ID="SWeaver">
+			<nom>Sigourney Weaver</nom>
+	</Artiste>
+	
+	<Film rdf:ID="PulpFiction">
+		<nom>Pulp Fiction</nom>
+		<genre>Science Fiction</genre>
+		<genre>Comedie</genre>
+		<genre>Gangsters</genre>
+		<annee>1994</annee>
+		<dirigePar rdf:resource="#QTarantino"/>
+		<distribution rdf:resource="#VVega"/>
+		<distribution rdf:resource="#BCoolidge"/>
+	</Film>
+	
+	<Artiste rdf:ID="QTarantino">
+		<nom>Quentin Tarantino</nom>
+	</Artiste>
+	
+	<Distribution rdf:ID="BCoolidge">
+		<personnage>Butch Coolidge</personnage>
+		<acteur rdf:resource="#BWillis"/>
+	</Distribution>
+	
+	<Distribution rdf:ID="VVega">
+		<personnage>Vincent Vega</personnage>
+		<acteur rdf:resource="#JTravolta"/>
+	</Distribution>
+	
+	<Artiste rdf:ID="BWillis">
+			<nom>Bruce Willis</nom>
+	</Artiste>
+		
+	<Artiste rdf:ID="JTravolta">
+		<nom>John Travolta</nom>
+	</Artiste>
+	
+	<Film rdf:ID="ReservoirDogs">
+		<nom>Resevoir Dogs</nom>
+		<dirigePar rdf:resource="#QTarantino"/>
+		<distribution rdf:resource="#MrWhite"/>
+	</Film>
+	
+	<Distribution rdf:ID="MrWhite">
+		<personnage>Mr White</personnage>
+		<acteur rdf:resource="#HKeitel"/>
+	</Distribution>
+	
+	<Artiste rdf:ID="HKeitel">
+			<nom>Harvey Keitel</nom>
+	</Artiste>
+	
+	<Film rdf:ID="Psychose">
+		<nom>Psychose</nom>
+		<genre>Horror</genre>
+		<genre>Mystere</genre>
+		<genre>Thriller</genre>
+		<annee>1960</annee>
+		<dirigePar rdf:resource="#AHitchcock"/>
+		<distribution rdf:resource="#NBates"/>
+		<distribution rdf:resource="#MCrane"/>
+	</Film>
+	
+	<Artiste rdf:ID="AHitchcock">
+		<nom>Alfred Hitchcock</nom>
+	</Artiste>
+	
+	<Distribution rdf:ID="NBates">
+		<personnage>Norman Bates</personnage>
+		<acteur rdf:resource="#APerkins"/>
+	</Distribution>
+	
+	<Distribution rdf:ID="MCrane">
+		<personnage>Marion Crane</personnage>
+		<acteur rdf:resource="#JLeigh"/>
+	</Distribution>
+	
+	<Artiste rdf:ID="APerkins">
+			<nom>Anthony Perkins</nom>
+	</Artiste>
+		
+	<Artiste rdf:ID="JLeigh">
+		<nom>Jane Leigh</nom>
+	</Artiste>
+	
+	<Film rdf:ID="MinutesPourVivre">
+		<nom>58 minutes pour vivre</nom>
+		<genre>Action</genre>
+		<genre>Thriller</genre>
+		<annee>1990</annee>
+		<dirigePar rdf:resource="#RHarlin"/>
+		<distribution rdf:resource="#JMacClane"/>
+		<distribution rdf:resource="#HMacClane"/>
+	</Film>
+	
+	<Artiste rdf:ID="RHarlin">
+		<nom>Renny Harlin</nom>
+	</Artiste>
+	
+	<Distribution rdf:ID="JMacClane">
+		<personnage>John Mac Clane</personnage>
+		<acteur rdf:resource="#BWillis"/>
+	</Distribution>
+	
+	<Distribution rdf:ID="HMacClane">
+		<personnage>Holly Mac Clane</personnage>
+		<acteur rdf:resource="#BBedelia"/>
+	</Distribution>
+		
+	<Artiste rdf:ID="BBedelia">
+		<nom>Bonny Bedelia</nom>
+	</Artiste>
+		
+
+</rdf:RDF>

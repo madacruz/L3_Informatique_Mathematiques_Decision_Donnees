@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE address SYSTEM "breves.dtd">
+<breves >
+	<breve theme="actu" langue="fr" date="3 décembre 2019">
+		<titre>Grève du 5 décembre : le "jeudi noir" français</titre>
+		<texte>
+		Pour les médias internationaux, cette mobilisation rappelle que "les Français détestent le changement". Le président "joue son mandat dans la mère de toutes les réformes, la retraite".
+		</texte>
+		<url href="https://www.lemonde.fr/economie/article/2019/12/05/greve-du-5-decembre-vu-de-l-etranger-le-jeudi-noir-francais-est-un-test-pour-macron_6021746_3234.html">LeMonde</url>
+		<url href="http://www.leparisien.fr/info-paris-ile-de-france-oise/transports/greve-ratp-rer-metros-et-bus-les-previsions-de-trafic-du-jeudi-5-decembre-03-12-2019-8209068.php">LeParisien</url>
+	</breve>
+
+	<breve theme="sport" langue="en" date="27 janvier 2020">
+	<titre>Kobe Bryant: Basketball legend dies in helicopter crash</titre>
+	<texte>
+	US basketball legend Kobe Bryant and his daughter Gianna were among nine people killed in a helicopter crash in the city of Calabasas, California.
+	</texte>
+	<photo src="https://ichef.bbci.co.uk/news/410/cpsprodpb/1650E/production/_110660419_059479011-1.jpg" />
+	<url href="https://www.bbc.com/news/world-us-canada-51256756">BBC</url>
+	</breve>
+
+</breves>

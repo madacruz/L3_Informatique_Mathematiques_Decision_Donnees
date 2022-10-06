@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE rdf:RDF [<!ENTITY xsd "http://www.w3.org/2001/XMLSchema#"> ]>
+
+<rdf:RDF
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+  xml:base="http://example.org/schemas/Cinematheque.rdfs">
+
+	<rdfs:Class rdf:ID="Cinematheque">
+		<rdfs:label xml:lang="fr">cinematheque</rdfs:label>
+		<rdfs:comment xml:lang="fr">collection de films et dartistes du milieu cinematographique</rdfs:comment>
+		<rdfs:label xml:lang="en">cinematheque</rdfs:label>
+		<rdfs:comment xml:lang="en">film and artist collection</rdfs:comment>
+	</rdfs:Class>
+
+	<rdfs:Class rdf:ID="Film">
+		<rdfs:label xml:lang="fr">film</rdfs:label>
+		<rdfs:label xml:lang="fr">long ou court metrage</rdfs:label>
+		<rdfs:comment xml:lang="fr">oeuvre cinematographique</rdfs:comment>
+		<rdfs:label xml:lang="en">film</rdfs:label>
+		<rdfs:label xml:lang="en">movie</rdfs:label>
+		<rdfs:label xml:lang="en">feature or short film</rdfs:label>
+		<rdfs:comment xml:lang="en">cinematographic artwork</rdfs:comment>
+	</rdfs:Class>
+	
+	<rdfs:Class rdf:ID="Artiste">
+		<rdfs:label xml:lang="fr">artiste</rdfs:label>
+		<rdfs:comment xml:lang="fr">personne ayant participe a une oeuvre cinematographique</rdfs:comment>
+		<rdfs:label xml:lang="en">artist</rdfs:label>
+		<rdfs:label xml:lang="en">performer</rdfs:label>
+		<rdfs:comment xml:lang="en">person who participated in a cinematographic artwork</rdfs:comment>
+	</rdfs:Class>
+	
+	<rdfs:Class rdf:ID="Distribution"/>
+
+	<rdf:Property rdf:ID="film">
+		<rdfs:domain rdf:resource="#Cinematheque"/>
+		<rdfs:range rdf:resource="#Film"/>
+		<rdfs:comment xml:lang="fr">un film de la cinematheque</rdfs:comment>
+	</rdf:Property>
+	
+	<rdf:Property rdf:ID="acteur">
+		<rdfs:domain rdf:resource="#Distribution"/>
+		<rdfs:range rdf:resource="#Artiste"/>
+		<rdfs:comment xml:lang="fr">un artiste qui joue un role dans un film</rdfs:comment>
+	</rdf:Property>
+	
+	<rdf:Property rdf:ID="distribution">
+		<rdfs:domain rdf:resource="#Film"/>
+		<rdfs:range rdf:resource="#Distribution"/>
+		<rdfs:comment xml:lang="fr">attribution dun role a un acteur</rdfs:comment>
+		<rdfs:comment xml:lang="en">assigment of a role to an actor</rdfs:comment>
+	</rdf:Property>
+	
+	<rdf:Property rdf:ID="personnage">
+		<rdfs:domain rdf:resource="#Distribution"/>
+		<rdfs:comment xml:lang="fr">personnage dans lhistoire dun film</rdfs:comment>
+	</rdf:Property>
+	
+	<rdf:Property rdf:ID="artiste">
+		<rdfs:domain rdf:resource="#Cinematheque"/>
+		<rdfs:range rdf:resource="#Artiste"/>
+		<rdfs:comment xml:lang="fr">personna ayant participe a un film de la cinematheque</rdfs:comment>
+	</rdf:Property>
+
+	<rdf:Property rdf:ID="dirigePar">
+		<rdfs:domain rdf:resource="#Film"/>
+		<rdfs:range rdf:resource="#Artiste"/>
+		<rdfs:comment xml:lang="fr">persone ayant dirige le film</rdfs:comment>
+		<rdfs:comment xml:lang="en">person who directed the movie</rdfs:comment>
+	</rdf:Property>
+
+	<rdf:Property rdf:ID="annee">
+		<rdfs:domain rdf:resource="#Film"/>
+		<rdfs:comment xml:lang="fr">annee de sortie du film sur grand ou petit ecran</rdfs:comment>
+	</rdf:Property>
+	
+	<rdf:Property rdf:ID="resume">
+		<rdfs:domain rdf:resource="#Film"/>
+		<rdfs:comment xml:lang="fr">quelques phrases qui expliquent brievement le scenario</rdfs:comment>
+	</rdf:Property>
+	
+	<rdf:Property rdf:ID="nom">
+		<rdfs:label xml:lang="en">name</rdfs:label>
+		<rdfs:comment xml:lang="fr">designation de quelquun ou quelque chose</rdfs:comment>
+	</rdf:Property>
+
+	<rdf:Property rdf:ID="genre">
+		<rdfs:domain rdf:resource="#Film"/>
+		<rdfs:comment xml:lang="fr">categorie dans laquelle se range le film</rdfs:comment>
+	</rdf:Property>
+	
+	
+</rdf:RDF>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE address SYSTEM "football.dtd">
+<games>
+	<game score="1-1">
+		<home-team>Roma</home-team>
+		<ex-team>Lazio</ex-team>
+		<scores>
+			<score time= "15">
+				<player>Klose</player>
+			</score>
+			<score time= "85" type="penalty">
+				<player>Totti</player>
+			</score>
+		</scores>
+		<yellows>
+			<player>Totti</player>
+			<player>Vieri</player>
+		</yellows>
+		<reds>
+			<player>Nedved</player>
+		</reds>
+	</game>
+</games>
+
+

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT participe EMPTY>
+<!ATTLIST participe proj IDREF #IMPLIED>
+<!ELEMENT plan ( projet*,  personne*)>
+<!ELEMENT projet (nom, description,  membre*)>
+<!ATTLIST projet id_projet ID #REQUIRED>
+<!ELEMENT description (#PCDATA)>
+<!ELEMENT personne (nom,  infos, participe*)>
+<!ATTLIST personne id_pers ID #REQUIRED>
+<!ELEMENT membre EMPTY>
+<!ATTLIST membre pers IDREF #IMPLIED>
+<!ELEMENT nom (#PCDATA)>
+<!ELEMENT infos (#PCDATA) >

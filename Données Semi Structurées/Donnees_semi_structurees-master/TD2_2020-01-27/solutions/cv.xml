@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE address SYSTEM "cv.dtd">
+<cv>
+	<coordonnees>
+		<nom> Napolitano </nom>
+		<prenom> Beatrice </prenom>
+		<adresse>
+			<numero> 00 </numero>
+			<voie> Rue de la pizza </voie>
+			<codepostal> 75000 </codepostal>
+			<ville> Paris </ville>
+		</adresse>
+		<dateDeNaissance> 16 Novembre 1900 </dateDeNaissance>
+		<tel> 06 12345678</tel>
+		<email>beatrice.napolitano@dauphine.fr</email>
+	</coordonnees>
+
+	<lesFormations>
+		<formation>
+			<annee>2006-2011</annee>
+			<diplome>Baccalaureat</diplome>
+			<lieu>Cosenza</lieu>
+		</formation>
+		<formation>
+			<annee>2011-2014</annee>
+			<diplome>Bachelor’s Degree in Computer Engineering</diplome>
+			<lieu>Cosenza</lieu>
+		</formation>
+		<formation>
+			<annee>2014-2018</annee>
+			<diplome>Master’s Degree in Computer Engineering</diplome>
+			<lieu>Cosenza</lieu>
+		</formation>
+	</lesFormations>
+
+	<lesExperiences>
+		<experience>
+			<annee>2013</annee>
+			<libelle>Exchange student - Warsaw University of Technology</libelle>
+			<lieu>Warsaw</lieu>
+		</experience>
+		<experience>
+			<annee>2015</annee>
+			<libelle>Exchange student - University of Rhode Island</libelle>
+			<lieu>Rhode Island</lieu>
+		</experience>
+		<experience>
+			<annee>2017</annee>
+			<libelle>Visiting student - Université Toulouse I Capitole</libelle>
+			<lieu>Toulouse</lieu>
+		</experience>
+	</lesExperiences>
+
+</cv> 

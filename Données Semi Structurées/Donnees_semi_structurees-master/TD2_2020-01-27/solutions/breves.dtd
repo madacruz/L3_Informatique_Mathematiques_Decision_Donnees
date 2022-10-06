@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT breves (breve*)>
+<!ELEMENT breve (titre,texte,photo?,url*)> 
+<!ATTLIST breve langue (fr|en) #REQUIRED 
+				theme (actu|sport|bourse|media) #REQUIRED
+				date CDATA #REQUIRED>
+<!ELEMENT titre (#PCDATA)>
+<!ELEMENT texte (#PCDATA)>
+<!ELEMENT photo EMPTY>
+<!ATTLIST photo src CDATA #REQUIRED>
+<!ELEMENT url (#PCDATA)>
+<!ATTLIST url href CDATA #REQUIRED>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE address SYSTEM "entreprise.dtd">
+<plan>
+	<projet id_projet="p1">
+		<nom>Policy Analytics</nom>
+		<description>Le point de départ du projet est le constat que l’aide à la décision dans les politiques publiques constitue un objet d’investigation scientifique avec des spécificités qui la différencie de l’aide à la décision privée (business analytics ou business intelligence).
+Le fait que des ressources publiques soient utilisées, que la légitimité des décideurs soit en général loin d’être évidente et de plus en plus contestée, que dans un état de droit une certaine capacité à rendre compte clairement des choix puisse être exigée, tout ceci implique que les méthodes d’aide doivent penser autant la décision finale que les processus sur lesquels elle repose.</description>
+		<membre pers="pers_01"/>
+		<membre pers="pers_03"/>
+	</projet>
+
+	<projet id_projet="p2">
+		<nom>Gestion, analyse et exploration de données massives</nom>
+		<description>L’objectif du projet est de concevoir, étudier et analyser expérimentalement des techniques de gestion et d’analyse de masses de données semi-structurées, avec un focus particulier sur les données du Web et les données à structure de graphe. Ces types de données sont de plus en plus utilisés dans des contextes d’application cruciaux, tels que la gestion de workflow, les réseaux sociaux, le Web sémantique, l’analyse de trafic, détection/prévention de fraudes et d’actes criminels, la bio­informatique.</description>
+		<membre pers="pers_02"/>
+		<membre pers="pers_03"/>
+	</projet>
+
+	<personne id_pers="pers_01">
+		<nom>Jules</nom>
+		<infos>Employé</infos>
+		<participe proj="p1"/>
+	</personne>
+	<personne id_pers="pers_02">
+		<nom>Luc</nom>
+		<infos>Employé</infos>
+		<participe proj="p2"/>
+	</personne>
+	<personne id_pers="pers_03">
+		<nom>Marie</nom>
+		<infos>Dirigeant</infos>
+		<participe proj="p1"/>
+		<participe proj="p2"/>
+	</personne>
+</plan>

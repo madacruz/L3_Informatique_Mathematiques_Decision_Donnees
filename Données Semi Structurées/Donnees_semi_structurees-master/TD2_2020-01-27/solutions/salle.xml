@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE address SYSTEM "entreprise.dtd">
+<salles>
+	<salle>
+		<nom> La Seine Musicale </nom>
+		<infos> 
+			<adresse> Ile Seguin, 92100 Boulogne-Billancourt </adresse>
+			<tel> 01 74 34 54 00 </tel>
+		</infos>
+		<lieu> Le permis de construire déposé le 1er août 2013, fut instruit jusqu'en mars 2014. Le 7 novembre 2013 avis de l'autorité environnementale sur l'étude d'impact. Début décembre 2013 les travaux préparatoires commencent par la démolition des usines Renault. Du 12 décembre 2013 au 18 janvier 2014 l'enquête publique. En mars 2014 délivrance du permis de construire et début des travaux préliminaires (terrassements, installations de chantier...). N'ayant fait l'objet d'aucun recours, la pose de la première pierre a été faite le 5 juillet 2014 par le président du Conseil général, Patrick Devedjian. Le coût de cette construction est évalué à 170 millions d'euros. La ville de Boulogne a par ailleurs cédé le foncier de 2,35 hectares pour 1 euro symbolique au conseil général. L'ouverture au public a lieu le 21 avril 20171. À l'occasion de la semaine d'inauguration, Bob Dylan est le premier artiste à produire un spectacle musical. </lieu> 
+		<concert>
+			<titre> Lady Gaga en concert </titre>
+			<date> 01/01/2020 </date>
+			<description> Lady Gaga, c’est avant tout un son qui va de la main d’un spectacle sans précédent. Le show à l’américaine n’a jamais été aussi bien défini que par les prouesses de Lady Gaga. Si vous aussi vous êtes un Little Monster, alors vous n’hésitez pas une seconde à chercher vos billets pour le prochain concert de Lady Gaga. </description>
+			<tourDeChant> 
+				<chant> 
+					<artiste id="a1"> 
+						<nom> Germanotta </nom>
+						<prenom> Stefani Joanne Angelina </prenom>
+						<dateDeNaissance> 28/03/1986 </dateDeNaissance> 
+						<photo src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Lady_Gaga_at_interview_in_2016_%28cropped%29.jpg/800px-Lady_Gaga_at_interview_in_2016_%28cropped%29.jpg" />
+						<bio> Née Stefani Joanne Angelina Germanotta, Lady Gaga a commencé la musique à l’âge de 4 ans mais ce n’est qu’après avoir décidé d’arrêter l’université qu’elle se lance dans le monde de la musique professionnelle. C’est grâce à Akon qu’elle est repérée et qu’elle signera son premier vrai contrat. Son premier album, le bien nommé The Fame la propulsera en haut des charts avec des titres qui sont déjà des hymnes universel tels que Poker Face ou Paparazzi. S’en suit une réédition avec des titres exclusifs qui confirment le succès et la popularité du Gaga Monster et avec Born This Way, c’est la consécration. </bio>						
+					</artiste>
+					<chanson>
+						<titre> Marry the Night </titre>
+						<auteur ref="a1" />
+						<compositeur ref="a1" />
+						<texte> La chanson est diffusée pour la première fois à la radio le 31 octobre sur la radio américaine KIIS-FM. Pour l'occasion, une version plus courte du titre a été réalisée.</texte>
+					</chanson>
+					<chanson>
+						<titre> Born This Way </titre>
+						<auteur ref="a1"/>
+						<compositeur ref="a1"/>
+						<texte> Born This Way est une chanson de l’artiste américaine Lady Gaga. Il s’agit du premier single de son troisième album studio, Born This Way. Gaga explique "Je l'ai écrite en dix minutes… et c’est une chanson avec un message magique. Après l'avoir écrite, les barrières se sont ouvertes et tous les autres titres sont venus à moi. C’était une sorte de conception immaculée"</texte>
+					</chanson>
+					<chanson>
+						<titre> The Edge of Glory </titre>
+						<auteur ref="a1" />
+						<compositeur ref="a1" />
+						<texte> La chanson est diffusée pour la première fois sur la station de radio américaine Kiss le 9 mai 2011, et disponible une heure plus tard sur l'iTunes Store, lors du lancement du "Countdown to Born This Way", le compte à rebours avant la sortie de l'album. Le deuxième single promotionnel de l'album, Hair, est également annoncé pour le 16 mai.</texte>
+					</chanson>
+				</chant>
+			</tourDeChant>
+		</concert>
+	</salle>
+</salles>

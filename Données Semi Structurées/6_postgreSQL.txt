@@ -1,0 +1,101 @@
+CREATE TEMP TABLE cinematheque(info json);
+\set content `type C:\Users\mathi\OneDrive\Bureau\ProjetDSS\5_converted.jsonld`
+INSERT INTO cinematheque VALUES(json_array_elements(:'content'));
+
+
+
+
+/*La liste des titres de ﬁlms*/
+SELECT info -> 'http://example.org/schemas/Cinematheque.rdfs#nom' -> 0 ->> '@value' AS movies
+FROM cinematheque
+WHERE info -> '@type' ->> 0 = 'http://example.org/schemas/Cinematheque.rdfs#Film';
+
+
+
+
+/*Les titres des ﬁlms parus en 1990*/
+SELECT info -> 'http://example.org/schemas/Cinematheque.rdfs#nom' -> 0 ->> '@value' AS movies
+FROM cinematheque
+WHERE info -> '@type' ->> 0 = 'http://example.org/schemas/Cinematheque.rdfs#Film'
+AND info -> 'http://example.org/schemas/Cinematheque.rdfs#annee' -> 0 ->> '@value' = '1990';
+
+
+
+
+/*Le résumé d’Alien */
+SELECT info -> 'http://example.org/schemas/Cinematheque.rdfs#resume' -> 0 ->> '@value' AS resume
+FROM cinematheque
+WHERE info -> '@type' ->> 0 = 'http://example.org/schemas/Cinematheque.rdfs#Film'
+AND info -> 'http://example.org/schemas/Cinematheque.rdfs#nom' -> 0 ->> '@value' = 'Alien';
+
+
+
+
+/*Titre des ﬁlms avec Bruce Willis */
+CREATE VIEW perso_bwillis (role)
+AS SELECT p.info ->> '@id'
+FROM cinematheque p
+WHERE p.info -> '@type' ->> 0 = 'http://example.org/schemas/Cinematheque.rdfs#Distribution'
+AND p.info -> 'http://example.org/schemas/Cinematheque.rdfs#acteur' -> 0 ->> '@id' = 'http://example.org/schemas/Cinematheque.rdfs-instances#BWillis'; 
+
+CREATE VIEW distribution (role, titre_film)
+AS SELECT json_array_elements(f.info -> 'http://example.org/schemas/Cinematheque.rdfs#distribution')->>'@id',
+f.info -> 'http://example.org/schemas/Cinematheque.rdfs#nom' -> 0 ->> '@value'
+FROM cinematheque f;
+
+SELECT d.titre_film AS movies_with_Bruce_Lee FROM distribution d, perso_bwillis r
+WHERE r.role = d.role;
+
+
+
+
+/*Quels ﬁlms ont un résumé? */
+SELECT f.info -> 'http://example.org/schemas/Cinematheque.rdfs#nom' -> 0 ->> '@value' AS movies_with_synopsis
+FROM cinematheque f
+WHERE f.info -> '@type' ->> 0 = 'http://example.org/schemas/Cinematheque.rdfs#Film'
+AND EXISTS 
+(SELECT json_array_elements(r.info -> 'http://example.org/schemas/Cinematheque.rdfs#resume') 
+FROM cinematheque r
+WHERE r.info -> 'http://example.org/schemas/Cinematheque.rdfs#nom' -> 0 ->> '@value' = f.info -> 'http://example.org/schemas/Cinematheque.rdfs#nom' -> 0 ->> '@value');
+
+
+
+
+/*Quels ﬁlms n'ont pas un résumé? */
+SELECT f.info -> 'http://example.org/schemas/Cinematheque.rdfs#nom' -> 0 ->> '@value' AS movies_without_synopsis
+FROM cinematheque f
+WHERE f.info -> '@type' ->> 0 = 'http://example.org/schemas/Cinematheque.rdfs#Film'
+AND NOT EXISTS 
+(SELECT json_array_elements(r.info -> 'http://example.org/schemas/Cinematheque.rdfs#resume') 
+FROM cinematheque r
+WHERE r.info -> 'http://example.org/schemas/Cinematheque.rdfs#nom' -> 0 ->> '@value' = f.info -> 'http://example.org/schemas/Cinematheque.rdfs#nom' -> 0 ->> '@value');
+
+
+
+
+/*Donner les titres des ﬁlms vieux de plus de trente ans*/
+CREATE VIEW dates (annee,titre)
+AS SELECT CAST(f.info -> 'http://example.org/schemas/Cinematheque.rdfs#annee' -> 0 ->> '@value' AS INTEGER), 
+f.info -> 'http://example.org/schemas/Cinematheque.rdfs#nom' -> 0 ->> '@value'
+FROM cinematheque f
+WHERE f.info -> '@type' ->> 0 = 'http://example.org/schemas/Cinematheque.rdfs#Film';
+
+SELECT titre FROM dates
+WHERE 2020-annee>=30;
+
+
+
+
+/*Quel rôle joue Harvey Keitel dans Reservoir dogs?*/
+CREATE VIEW roles_dans_rd (personnages)
+AS SELECT json_array_elements(f.info -> 'http://example.org/schemas/Cinematheque.rdfs#distribution')->>'@id'
+FROM cinematheque f
+WHERE f.info -> 'http://example.org/schemas/Cinematheque.rdfs#nom' -> 0 ->> '@value' = 'Resevoir Dogs';
+
+SELECT f1.info -> 'http://example.org/schemas/Cinematheque.rdfs#personnage' -> 0 ->> '@value' AS personnage
+FROM cinematheque f1, distribution d
+WHERE f1.info -> 'http://example.org/schemas/Cinematheque.rdfs#acteur' -> 0 ->> '@id' = 'http://example.org/schemas/Cinematheque.rdfs-instances#HKeitel'
+AND d.role = f1.info ->> '@id'
+AND f1.info -> '@type' ->> 0 = 'http://example.org/schemas/Cinematheque.rdfs#Distribution';
+
+

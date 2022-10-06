@@ -1,0 +1,10 @@
+PREFIX humans: <http://www.inria.fr/2007/09/11/humans.rdfs#>
+SELECT ?x
+WHERE
+{
+ { ?y humans:hasChild ?x }
+ UNION
+ { ?x humans:hasParent ?y }
+}
+
+#Certains apparaissent 2 fois parce qu'on retrouve leur 2 parents ; comment éviter les doublons ?
